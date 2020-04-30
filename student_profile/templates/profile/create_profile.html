@@ -1,0 +1,120 @@
+{% load widget_tweaks %}
+{% load crispy_forms_tags  %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div class="modal-header ">
+    <h3 class="modal-title">Create your profile</h3>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body ">
+<div class="card" style="padding: 2rem">
+    <div class="form-row">
+
+                        <div class="form-group col-md-4">
+                          {{ form.user|as_crispy_field }}
+                        </div>
+
+
+                      </div>
+                      <hr>
+                    <div class="form-row">
+
+                      <div class="form-group col-md-4">
+                        {{ form.last_name|as_crispy_field }}
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        {{ form.first_name|as_crispy_field }}
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        {{ form.middle_name|as_crispy_field }}
+                      </div>
+
+                    </div>
+                    <hr>
+                    <div class="form-row">
+
+                        <div class="form-group col-md-3">
+                          {{ form.address|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-3">
+                          {{ form.birthday|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-3">
+                          {{ form.age|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            {{ form.contact_no|as_crispy_field }}
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="form-row">
+
+                        <div class="form-group col-md-4">
+                          {{ form.email|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-4">
+                          {{ form.gender|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-4">
+                          {{ form.student_id|as_crispy_field }}
+                        </div>
+
+                    </div>
+
+                    <hr>
+                    <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                          {{ form.mothers_name|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          {{ form.fathers_name|as_crispy_field }}
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="form-row">
+
+                        <div class="form-group col-md-4">
+                          {{ form.academic_level|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-4">
+                          {{ form.program|as_crispy_field }}
+                        </div>
+
+                        <div class="form-group col-md-4">
+                          {{ form.section|as_crispy_field }}
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        {{ form.bio|as_crispy_field }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.profile_picture|as_crispy_field}}
+                    </div>
+
+  </div>
+</div>
+  <div class="modal-footer">
+  	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+    <button type="button" class="submit-btn btn btn-primary btn-sm">Create</button>
+  </div>
+
+</form>
