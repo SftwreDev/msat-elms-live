@@ -1,1 +1,1 @@
-web: gunicorn elms.wsgi --logfile-
+web: gunicorn elms.wsgi --log-file-
